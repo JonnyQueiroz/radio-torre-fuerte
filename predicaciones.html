@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Predicaciones y sermones de Radio Torre Fuerte — Iglesia Bautista Torre Fuerte, Concepción, Chile." />
+  <meta name="theme-color" content="#0a1628" />
+  <title>Predicaciones | Radio Torre Fuerte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand" aria-label="Radio Torre Fuerte — Inicio">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="14" y="22" width="10" height="13" rx="1" fill="#1a3a5c" stroke="#d4a017" stroke-width="1.2"/>
+          <rect x="17" y="29" width="4" height="6" rx="0.5" fill="#d4a017" opacity="0.8"/>
+          <rect x="13" y="19" width="4"  height="4"  rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+          <rect x="21" y="19" width="4"  height="4"  rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+          <line x1="19" y1="19" x2="19" y2="10" stroke="#d4a017" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="5"  x2="19" y2="10" stroke="#d4a017" stroke-width="2"   stroke-linecap="round"/>
+          <line x1="16" y1="7"  x2="22" y2="7"  stroke="#d4a017" stroke-width="2"   stroke-linecap="round"/>
+          <path d="M9 14 Q10.5 11 13 10"  stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M6 16 Q8 11.5 12 9.5"  stroke="#d4a017" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M29 14 Q27.5 11 25 10" stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M32 16 Q30 11.5 26 9.5" stroke="#d4a017" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.6"/>
+        </svg>
+        <span>Radio Torre Fuerte</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu" role="menubar">
+        <li role="none"><a href="index.html"         role="menuitem">Inicio</a></li>
+        <li role="none"><a href="programacion.html"  role="menuitem">Programación</a></li>
+        <li role="none"><a href="predicaciones.html" role="menuitem">Predicaciones</a></li>
+        <li role="none"><a href="oracion.html"       role="menuitem">Oración</a></li>
+        <li role="none"><a href="contacto.html"      role="menuitem">Contacto</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header fade-in" aria-labelledby="pred-heading">
+      <div class="container">
+        <span class="section-label">🎙 Archivo de Sermones</span>
+        <h1 id="pred-heading">Predicaciones</h1>
+        <p>Mensajes que edifican, fortalecen y llevan al encuentro con Dios.</p>
+      </div>
+    </header>
+
+    <!-- GRILLA DE PREDICACIONES -->
+    <section aria-labelledby="pred-grid-heading">
+      <div class="container">
+
+        <span class="section-label">Recientes</span>
+        <h2 id="pred-grid-heading">Sermones Disponibles</h2>
+        <div class="divider"></div>
+
+        <div class="predicaciones-grid">
+
+          <!-- ——— PREDICACIÓN 1 ——— -->
+          <article class="predicacion-card fade-in" aria-labelledby="pred-1-title">
+            <div class="card-thumb" aria-hidden="true">✝️</div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="badge">10 Nov 2026</span>
+                <span class="badge">45 min</span>
+              </div>
+              <h3 class="card-title" id="pred-1-title">
+                La Fe que Mueve Montañas
+              </h3>
+              <p class="card-preacher">
+                📖 Mateo 17:20 &nbsp;·&nbsp; Pastor Juan González
+              </p>
+
+              <!-- Mini reproductor -->
+              <!-- ⚠️ Reemplaza el src con la URL real del audio MP3 -->
+              <div class="mini-player">
+                <button class="mini-play-btn" aria-label="Reproducir 'La Fe que Mueve Montañas'">▶</button>
+                <div class="mini-info">
+                  <span>La Fe que Mueve Montañas</span>
+                  <span>Pastor Juan González</span>
+                </div>
+                <audio preload="none" aria-hidden="true">
+                  <!-- ⚠️ Reemplaza esta URL con el archivo de audio real -->
+                  <source src="audio/predicacion-01.mp3" type="audio/mpeg" />
+                  Tu navegador no soporta audio HTML5.
+                </audio>
+              </div>
+            </div>
+          </article><!-- /predicación 1 -->
+
+
+          <!-- ——— PREDICACIÓN 2 ——— -->
+          <article class="predicacion-card fade-in fade-in-delay-1" aria-labelledby="pred-2-title">
+            <div class="card-thumb" aria-hidden="true">📖</div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="badge">3 Nov 2026</span>
+                <span class="badge">52 min</span>
+              </div>
+              <h3 class="card-title" id="pred-2-title">
+                El Amor de Dios: Profundo e Inagotable
+              </h3>
+              <p class="card-preacher">
+                📖 Romanos 8:38–39 &nbsp;·&nbsp; Pastora María Pérez
+              </p>
+
+              <div class="mini-player">
+                <button class="mini-play-btn" aria-label="Reproducir 'El Amor de Dios'">▶</button>
+                <div class="mini-info">
+                  <span>El Amor de Dios: Profundo e Inagotable</span>
+                  <span>Pastora María Pérez</span>
+                </div>
+                <audio preload="none" aria-hidden="true">
+                  <!-- ⚠️ Reemplaza esta URL con el archivo de audio real -->
+                  <source src="audio/predicacion-02.mp3" type="audio/mpeg" />
+                  Tu navegador no soporta audio HTML5.
+                </audio>
+              </div>
+            </div>
+          </article><!-- /predicación 2 -->
+
+
+          <!-- ——— PREDICACIÓN 3 ——— -->
+          <article class="predicacion-card fade-in fade-in-delay-2" aria-labelledby="pred-3-title">
+            <div class="card-thumb" aria-hidden="true">🕊️</div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="badge">27 Oct 2026</span>
+                <span class="badge">38 min</span>
+              </div>
+              <h3 class="card-title" id="pred-3-title">
+                Paz que Sobrepasa Todo Entendimiento
+              </h3>
+              <p class="card-preacher">
+                📖 Filipenses 4:6–7 &nbsp;·&nbsp; Evangelista Carlos Roa
+              </p>
+
+              <div class="mini-player">
+                <button class="mini-play-btn" aria-label="Reproducir 'Paz que Sobrepasa Todo Entendimiento'">▶</button>
+                <div class="mini-info">
+                  <span>Paz que Sobrepasa Todo Entendimiento</span>
+                  <span>Evangelista Carlos Roa</span>
+                </div>
+                <audio preload="none" aria-hidden="true">
+                  <!-- ⚠️ Reemplaza esta URL con el archivo de audio real -->
+                  <source src="audio/predicacion-03.mp3" type="audio/mpeg" />
+                  Tu navegador no soporta audio HTML5.
+                </audio>
+              </div>
+            </div>
+          </article><!-- /predicación 3 -->
+
+
+          <!-- ——— PREDICACIÓN 4 (extra) ——— -->
+          <article class="predicacion-card fade-in fade-in-delay-3" aria-labelledby="pred-4-title">
+            <div class="card-thumb" aria-hidden="true">🌿</div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="badge">19 Oct 2026</span>
+                <span class="badge">41 min</span>
+              </div>
+              <h3 class="card-title" id="pred-4-title">
+                Fortaleza en Tiempos de Prueba
+              </h3>
+              <p class="card-preacher">
+                📖 Santiago 1:2–4 &nbsp;·&nbsp; Pastor Juan González
+              </p>
+
+              <div class="mini-player">
+                <button class="mini-play-btn" aria-label="Reproducir 'Fortaleza en Tiempos de Prueba'">▶</button>
+                <div class="mini-info">
+                  <span>Fortaleza en Tiempos de Prueba</span>
+                  <span>Pastor Juan González</span>
+                </div>
+                <audio preload="none" aria-hidden="true">
+                  <!-- ⚠️ Reemplaza esta URL con el archivo de audio real -->
+                  <source src="audio/predicacion-04.mp3" type="audio/mpeg" />
+                  Tu navegador no soporta audio HTML5.
+                </audio>
+              </div>
+            </div>
+          </article><!-- /predicación 4 -->
+
+
+          <!-- ——— PREDICACIÓN 5 (extra) ——— -->
+          <article class="predicacion-card fade-in fade-in-delay-4" aria-labelledby="pred-5-title">
+            <div class="card-thumb" aria-hidden="true">🙏</div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="badge">12 Oct 2026</span>
+                <span class="badge">29 min</span>
+              </div>
+              <h3 class="card-title" id="pred-5-title">
+                El Poder Transformador de la Oración
+              </h3>
+              <p class="card-preacher">
+                📖 Lucas 18:1–8 &nbsp;·&nbsp; Pastora María Pérez
+              </p>
+
+              <div class="mini-player">
+                <button class="mini-play-btn" aria-label="Reproducir 'El Poder Transformador de la Oración'">▶</button>
+                <div class="mini-info">
+                  <span>El Poder Transformador de la Oración</span>
+                  <span>Pastora María Pérez</span>
+                </div>
+                <audio preload="none" aria-hidden="true">
+                  <!-- ⚠️ Reemplaza esta URL con el archivo de audio real -->
+                  <source src="audio/predicacion-05.mp3" type="audio/mpeg" />
+                  Tu navegador no soporta audio HTML5.
+                </audio>
+              </div>
+            </div>
+          </article><!-- /predicación 5 -->
+
+
+          <!-- ——— PREDICACIÓN 6 (extra) ——— -->
+          <article class="predicacion-card fade-in fade-in-delay-4" aria-labelledby="pred-6-title">
+            <div class="card-thumb" aria-hidden="true">⚓</div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="badge">5 Oct 2026</span>
+                <span class="badge">55 min</span>
+              </div>
+              <h3 class="card-title" id="pred-6-title">
+                Ancla del Alma: Esperanza en Cristo
+              </h3>
+              <p class="card-preacher">
+                📖 Hebreos 6:19 &nbsp;·&nbsp; Evangelista Carlos Roa
+              </p>
+
+              <div class="mini-player">
+                <button class="mini-play-btn" aria-label="Reproducir 'Ancla del Alma: Esperanza en Cristo'">▶</button>
+                <div class="mini-info">
+                  <span>Ancla del Alma: Esperanza en Cristo</span>
+                  <span>Evangelista Carlos Roa</span>
+                </div>
+                <audio preload="none" aria-hidden="true">
+                  <!-- ⚠️ Reemplaza esta URL con el archivo de audio real -->
+                  <source src="audio/predicacion-06.mp3" type="audio/mpeg" />
+                  Tu navegador no soporta audio HTML5.
+                </audio>
+              </div>
+            </div>
+          </article><!-- /predicación 6 -->
+
+        </div><!-- /predicaciones-grid -->
+
+        <!-- Instrucción para agregar predicaciones -->
+        <p class="text-center fade-in" style="margin-top:2.5rem; font-size:0.85rem; opacity:0.65;">
+          Para agregar nuevas predicaciones, consulta el archivo <code>README.md</code> del proyecto.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">
+          <svg width="24" height="24" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="14" y="22" width="10" height="13" rx="1" fill="#1a3a5c" stroke="#d4a017" stroke-width="1.2"/>
+            <rect x="13" y="19" width="4" height="4" rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+            <rect x="21" y="19" width="4" height="4" rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+            <line x1="19" y1="19" x2="19" y2="10" stroke="#d4a017" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="19" y1="5"  x2="19" y2="10" stroke="#d4a017" stroke-width="2" stroke-linecap="round"/>
+            <line x1="16" y1="7"  x2="22" y2="7"  stroke="#d4a017" stroke-width="2" stroke-linecap="round"/>
+            <path d="M9 14 Q10.5 11 13 10"  stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+            <path d="M29 14 Q27.5 11 25 10" stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+          </svg>
+          Radio Torre Fuerte
+        </div>
+        <p class="footer-desc">Transmitiendo la Palabra de Dios las 24 horas desde Concepción, Chile.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="programacion.html">Programación</a></li>
+          <li><a href="predicaciones.html">Predicaciones</a></li>
+          <li><a href="oracion.html">Oración</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:radio@torrefuerte.cl">radio@torrefuerte.cl</a></li>
+          <li><a href="tel:+56412345678">+56 41 234 5678</a></li>
+          <li>Concepción, Chile</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span class="footer-year"></span> Iglesia Bautista Torre Fuerte, Concepción, Chile.</p>
+      <p>Desarrollado con ❤️ para la gloria de Dios</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

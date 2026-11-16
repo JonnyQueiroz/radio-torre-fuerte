@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Programación semanal de Radio Torre Fuerte — Iglesia Bautista Torre Fuerte, Concepción, Chile." />
+  <meta name="theme-color" content="#0a1628" />
+  <title>Programación | Radio Torre Fuerte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand" aria-label="Radio Torre Fuerte — Inicio">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="14" y="22" width="10" height="13" rx="1" fill="#1a3a5c" stroke="#d4a017" stroke-width="1.2"/>
+          <rect x="17" y="29" width="4" height="6" rx="0.5" fill="#d4a017" opacity="0.8"/>
+          <rect x="13" y="19" width="4"  height="4"  rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+          <rect x="21" y="19" width="4"  height="4"  rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+          <line x1="19" y1="19" x2="19" y2="10" stroke="#d4a017" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="5"  x2="19" y2="10" stroke="#d4a017" stroke-width="2"   stroke-linecap="round"/>
+          <line x1="16" y1="7"  x2="22" y2="7"  stroke="#d4a017" stroke-width="2"   stroke-linecap="round"/>
+          <path d="M9 14 Q10.5 11 13 10"   stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M6 16 Q8 11.5 12 9.5"   stroke="#d4a017" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M29 14 Q27.5 11 25 10"  stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M32 16 Q30 11.5 26 9.5" stroke="#d4a017" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.6"/>
+        </svg>
+        <span>Radio Torre Fuerte</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu" role="menubar">
+        <li role="none"><a href="index.html"         role="menuitem">Inicio</a></li>
+        <li role="none"><a href="programacion.html"  role="menuitem">Programación</a></li>
+        <li role="none"><a href="predicaciones.html" role="menuitem">Predicaciones</a></li>
+        <li role="none"><a href="oracion.html"       role="menuitem">Oración</a></li>
+        <li role="none"><a href="contacto.html"      role="menuitem">Contacto</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header fade-in" aria-labelledby="prog-heading">
+      <div class="container">
+        <span class="section-label">📅 Horarios</span>
+        <h1 id="prog-heading">Programación Semanal</h1>
+        <p>Conoce los programas que transmitimos cada semana para edificar tu fe.</p>
+      </div>
+    </header>
+
+    <!-- PROGRAMACIÓN -->
+    <section aria-labelledby="prog-table-heading">
+      <div class="container">
+
+        <!-- ——— LUNES A VIERNES ——— -->
+        <h2 id="prog-table-heading" class="fade-in" style="margin-bottom:0.25rem;">
+          Lunes a Viernes
+        </h2>
+        <div class="divider"></div>
+
+        <div class="tabla-wrap fade-in fade-in-delay-1">
+          <table aria-label="Programación de lunes a viernes">
+            <thead>
+              <tr>
+                <th scope="col">Horario</th>
+                <th scope="col">Programa</th>
+                <th scope="col">Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>07:00 – 08:00</td>
+                <td>Devocional Matutino</td>
+                <td>
+                  Comenzamos el día con oración, lectura bíblica y reflexión.
+                  <div class="prog-desc">Apertura espiritual para tu jornada.</div>
+                </td>
+              </tr>
+              <tr>
+                <td>08:00 – 09:00</td>
+                <td>Himnos y Cánticos</td>
+                <td>
+                  Una hora de música cristiana clásica e himnos congregacionales.
+                  <div class="prog-desc">Para adorar a Dios desde temprano.</div>
+                </td>
+              </tr>
+              <tr>
+                <td>09:00 – 12:00</td>
+                <td>Música de Alabanza</td>
+                <td>
+                  Amplia selección de música cristiana contemporánea y de adoración.
+                  <div class="prog-desc">Adoración continua para tu mañana.</div>
+                </td>
+              </tr>
+              <tr>
+                <td>12:00 – 13:00</td>
+                <td>Mediodía con la Palabra</td>
+                <td>
+                  Pausa espiritual: un versículo, reflexión breve y oración.
+                  <div class="prog-desc">Renueva tu mente al mediodía.</div>
+                </td>
+              </tr>
+              <tr>
+                <td>13:00 – 17:00</td>
+                <td>Música Variada Cristiana</td>
+                <td>
+                  Géneros variados: alabanza, adoración, gospel y más.
+                  <div class="prog-desc">Acompañamiento musical para la tarde.</div>
+                </td>
+              </tr>
+              <tr>
+                <td>17:00 – 18:00</td>
+                <td>Reflexión Vespertina</td>
+                <td>
+                  Estudio bíblico radial con aplicaciones prácticas para la vida cristiana.
+                  <div class="prog-desc">Profundizando en la Palabra cada día.</div>
+                </td>
+              </tr>
+              <tr>
+                <td>18:00 – 19:00</td>
+                <td>Noticias del Reino</td>
+                <td>
+                  Noticias y eventos del mundo cristiano evangélico en Chile y el mundo.
+                  <div class="prog-desc">Mantente informado sobre el Cuerpo de Cristo.</div>
+                </td>
+              </tr>
+              <tr>
+                <td>19:00 – 20:00</td>
+                <td>Predicaciones <span class="tag-especial">Destacado</span></td>
+                <td>
+                  Sermones grabados de pastores y evangelistas invitados.
+                  <div class="prog-desc">Predicación sólida y edificante.</div>
+                </td>
+              </tr>
+              <tr>
+                <td>20:00 – 22:00</td>
+                <td>Música Nocturna</td>
+                <td>
+                  Música de adoración suave para cerrar el día en paz con Dios.
+                  <div class="prog-desc">Cierra tu día adorando.</div>
+                </td>
+              </tr>
+              <tr>
+                <td>22:00 – 07:00</td>
+                <td>Transmisión Continua</td>
+                <td>
+                  Música cristiana y mensajes breves durante la madrugada.
+                  <div class="prog-desc">Nunca dejamos de transmitir la Palabra.</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- /tabla-wrap -->
+
+
+        <!-- ——— MIÉRCOLES (especial) ——— -->
+        <h2 class="fade-in" style="margin:3rem 0 0.25rem;">Miércoles — Especial</h2>
+        <div class="divider"></div>
+
+        <div class="tabla-wrap fade-in fade-in-delay-1">
+          <table aria-label="Programación especial del miércoles">
+            <thead>
+              <tr>
+                <th scope="col">Horario</th>
+                <th scope="col">Programa</th>
+                <th scope="col">Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>07:00 – 08:00</td>
+                <td>Devocional Matutino</td>
+                <td>Igual que los demás días de semana.</td>
+              </tr>
+              <tr>
+                <td>08:00 – 19:00</td>
+                <td>Programación Regular</td>
+                <td>Misma parrilla de lunes a viernes.</td>
+              </tr>
+              <tr>
+                <td>20:00 – 21:30</td>
+                <td>Estudio Bíblico <span class="tag-especial">En Vivo</span></td>
+                <td>
+                  Transmisión en directo del estudio bíblico de los miércoles de la iglesia.
+                  <div class="prog-desc">Estudio expositivo de las Escrituras.</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+        <!-- ——— SÁBADO ——— -->
+        <h2 class="fade-in" style="margin:3rem 0 0.25rem;">Sábado</h2>
+        <div class="divider"></div>
+
+        <div class="tabla-wrap fade-in fade-in-delay-1">
+          <table aria-label="Programación del sábado">
+            <thead>
+              <tr>
+                <th scope="col">Horario</th>
+                <th scope="col">Programa</th>
+                <th scope="col">Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>08:00 – 10:00</td>
+                <td>Alabanza Matinal</td>
+                <td>Himnos y música de adoración para el sábado por la mañana.</td>
+              </tr>
+              <tr>
+                <td>10:00 – 12:00</td>
+                <td>El Mejor de la Semana</td>
+                <td>
+                  Reemisión del mejor sermón y la mejor música de la semana.
+                  <div class="prog-desc">Por si te lo perdiste.</div>
+                </td>
+              </tr>
+              <tr>
+                <td>12:00 – 20:00</td>
+                <td>Música Variada Cristiana</td>
+                <td>Programación musical continua para el día sábado.</td>
+              </tr>
+              <tr>
+                <td>20:00 – 22:00</td>
+                <td>Programa Juvenil</td>
+                <td>
+                  Música cristiana contemporánea y mensajes para la juventud.
+                  <div class="prog-desc">Para los jóvenes de la fe.</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+        <!-- ——— DOMINGO ——— -->
+        <h2 class="fade-in" style="margin:3rem 0 0.25rem;">Domingo — Cultos en Vivo</h2>
+        <div class="divider"></div>
+
+        <div class="tabla-wrap fade-in fade-in-delay-1">
+          <table aria-label="Programación del domingo">
+            <thead>
+              <tr>
+                <th scope="col">Horario</th>
+                <th scope="col">Programa</th>
+                <th scope="col">Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>08:00 – 10:30</td>
+                <td>Preparación Dominical</td>
+                <td>Himnos clásicos y meditaciones para preparar el corazón para el culto.</td>
+              </tr>
+              <tr>
+                <td>11:00 – 13:00</td>
+                <td>Culto Dominical Matutino <span class="tag-especial">En Vivo</span></td>
+                <td>
+                  Transmisión en directo del culto principal del domingo.
+                  <div class="prog-desc">Adoración, alabanza y predicación de la Palabra.</div>
+                </td>
+              </tr>
+              <tr>
+                <td>13:00 – 18:30</td>
+                <td>Música y Reflexión</td>
+                <td>Programación especial dominical con reflexiones y música variada.</td>
+              </tr>
+              <tr>
+                <td>19:00 – 21:00</td>
+                <td>Culto Vespertino <span class="tag-especial">En Vivo</span></td>
+                <td>
+                  Segunda transmisión dominical en directo desde el templo.
+                  <div class="prog-desc">Adoración y Palabra para cerrar el día del Señor.</div>
+                </td>
+              </tr>
+              <tr>
+                <td>21:00 – 07:00</td>
+                <td>Transmisión Nocturna</td>
+                <td>Música cristiana suave para la noche del domingo.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Nota -->
+        <p class="fade-in" style="margin-top:2rem; font-size:0.88rem; opacity:0.75; text-align:center;">
+          * Los horarios pueden variar por eventos especiales, campañas o días festivos.<br>
+          Síguenos en nuestras redes sociales para estar al tanto de los cambios.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">
+          <svg width="24" height="24" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="14" y="22" width="10" height="13" rx="1" fill="#1a3a5c" stroke="#d4a017" stroke-width="1.2"/>
+            <rect x="13" y="19" width="4" height="4" rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+            <rect x="21" y="19" width="4" height="4" rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+            <line x1="19" y1="19" x2="19" y2="10" stroke="#d4a017" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="19" y1="5"  x2="19" y2="10" stroke="#d4a017" stroke-width="2" stroke-linecap="round"/>
+            <line x1="16" y1="7"  x2="22" y2="7"  stroke="#d4a017" stroke-width="2" stroke-linecap="round"/>
+            <path d="M9 14 Q10.5 11 13 10"  stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+            <path d="M29 14 Q27.5 11 25 10" stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+          </svg>
+          Radio Torre Fuerte
+        </div>
+        <p class="footer-desc">Transmitiendo la Palabra de Dios las 24 horas desde Concepción, Chile.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="programacion.html">Programación</a></li>
+          <li><a href="predicaciones.html">Predicaciones</a></li>
+          <li><a href="oracion.html">Oración</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:radio@torrefuerte.cl">radio@torrefuerte.cl</a></li>
+          <li><a href="tel:+56412345678">+56 41 234 5678</a></li>
+          <li>Concepción, Chile</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span class="footer-year"></span> Iglesia Bautista Torre Fuerte, Concepción, Chile.</p>
+      <p>Desarrollado con ❤️ para la gloria de Dios</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

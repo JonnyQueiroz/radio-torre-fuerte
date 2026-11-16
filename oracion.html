@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Envía tu petición de oración a Radio Torre Fuerte — Iglesia Bautista Torre Fuerte, Concepción, Chile." />
+  <meta name="theme-color" content="#0a1628" />
+  <title>Petición de Oración | Radio Torre Fuerte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Estilos adicionales para esta página */
+    .success-msg {
+      display: none;
+      background: rgba(39,174,96,0.15);
+      border: 1px solid rgba(39,174,96,0.4);
+      color: #2ecc71;
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius);
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    .oracion-form-card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.25rem;
+    }
+    .oracion-form-card .sub {
+      font-size: 0.88rem;
+      color: var(--color-gray);
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand" aria-label="Radio Torre Fuerte — Inicio">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="14" y="22" width="10" height="13" rx="1" fill="#1a3a5c" stroke="#d4a017" stroke-width="1.2"/>
+          <rect x="17" y="29" width="4" height="6" rx="0.5" fill="#d4a017" opacity="0.8"/>
+          <rect x="13" y="19" width="4"  height="4"  rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+          <rect x="21" y="19" width="4"  height="4"  rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+          <line x1="19" y1="19" x2="19" y2="10" stroke="#d4a017" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="5"  x2="19" y2="10" stroke="#d4a017" stroke-width="2"   stroke-linecap="round"/>
+          <line x1="16" y1="7"  x2="22" y2="7"  stroke="#d4a017" stroke-width="2"   stroke-linecap="round"/>
+          <path d="M9 14 Q10.5 11 13 10"  stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M6 16 Q8 11.5 12 9.5"  stroke="#d4a017" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M29 14 Q27.5 11 25 10" stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M32 16 Q30 11.5 26 9.5" stroke="#d4a017" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.6"/>
+        </svg>
+        <span>Radio Torre Fuerte</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu" role="menubar">
+        <li role="none"><a href="index.html"         role="menuitem">Inicio</a></li>
+        <li role="none"><a href="programacion.html"  role="menuitem">Programación</a></li>
+        <li role="none"><a href="predicaciones.html" role="menuitem">Predicaciones</a></li>
+        <li role="none"><a href="oracion.html"       role="menuitem">Oración</a></li>
+        <li role="none"><a href="contacto.html"      role="menuitem">Contacto</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header fade-in" aria-labelledby="oracion-heading">
+      <div class="container">
+        <span class="section-label">🙏 En Comunidad</span>
+        <h1 id="oracion-heading">Petición de Oración</h1>
+        <p>«La oración eficaz del justo puede mucho.» — Santiago 5:16</p>
+      </div>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <section>
+      <div class="container">
+
+        <div class="oracion-layout">
+
+          <!-- ——— FORMULARIO ——— -->
+          <div class="oracion-form-card fade-in">
+            <h2>Envíanos tu Petición</h2>
+            <p class="sub">
+              Nuestro equipo de intercesores orará fielmente por ti.
+              Tu información es confidencial y sagrada.
+            </p>
+
+            <!-- Mensaje de éxito (mostrado por JS tras envío) -->
+            <div class="success-msg" id="success-msg" role="alert">
+              ✅ ¡Tu petición fue enviada! Oraremos por ti. Dios te bendiga.
+            </div>
+
+            <!--
+              ⚠️ IMPORTANTE — CONFIGURACIÓN DE FORMSPREE:
+              1. Crea una cuenta gratuita en https://formspree.io
+              2. Crea un nuevo formulario y copia tu ID (ej: f/xpzgdvkb)
+              3. Reemplaza "XXXXXXXX" en el action con tu ID real
+              Ejemplo: action="https://formspree.io/f/xpzgdvkb"
+            -->
+            <form
+              id="oracion-form"
+              action="https://formspree.io/f/XXXXXXXX"
+              method="POST"
+              novalidate
+              aria-label="Formulario de petición de oración">
+
+              <!-- Campo oculto para Formspree -->
+              <input type="hidden" name="_subject" value="Nueva Petición de Oración — Radio Torre Fuerte" />
+              <input type="text"   name="_gotcha"  style="display:none" tabindex="-1" autocomplete="off" />
+
+              <div class="form-group">
+                <label for="nombre">Nombre <span aria-hidden="true" style="color:var(--color-gold)">*</span></label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Tu nombre o apodo"
+                  required
+                  autocomplete="given-name"
+                  aria-required="true" />
+              </div>
+
+              <div class="form-group">
+                <label for="email">
+                  Correo Electrónico
+                  <span style="font-weight:400; color:var(--color-gray); font-size:0.8rem;">(opcional)</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="tu@correo.com"
+                  autocomplete="email" />
+              </div>
+
+              <div class="form-group">
+                <label for="peticion">Petición de Oración <span aria-hidden="true" style="color:var(--color-gold)">*</span></label>
+                <textarea
+                  id="peticion"
+                  name="peticion"
+                  placeholder="Cuéntanos cómo podemos orar por ti. Tu petición es confidencial…"
+                  required
+                  aria-required="true"
+                  rows="6"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="tipo">Tipo de Petición</label>
+                <input
+                  type="text"
+                  id="tipo"
+                  name="tipo"
+                  placeholder="Ej: salud, familia, trabajo, salvación…" />
+              </div>
+
+              <button type="submit" class="btn-primary" id="submit-btn">
+                🙏 Enviar Petición
+              </button>
+            </form>
+
+            <p style="font-size:0.78rem; color:var(--color-gray); margin-top:1rem; opacity:0.75;">
+              Al enviar este formulario, aceptas que tu petición sea compartida con nuestro equipo de oración de forma confidencial.
+            </p>
+          </div><!-- /oracion-form-card -->
+
+
+          <!-- ——— VERSÍCULOS DE ALIENTO ——— -->
+          <aside class="oracion-versiculos fade-in fade-in-delay-1" aria-label="Versículos sobre la oración">
+            <span class="section-label" style="margin-bottom:0.5rem;">Palabras de Aliento</span>
+            <h2 style="margin-bottom:1.5rem;">Promesas sobre la Oración</h2>
+
+            <div class="versiculo-card">
+              <blockquote>
+                «Pedid, y se os dará; buscad, y hallaréis; llamad, y se os abrirá.»
+              </blockquote>
+              <cite>Mateo 7:7</cite>
+            </div>
+
+            <div class="versiculo-card">
+              <blockquote>
+                «No se inquieten por nada; más bien, en toda ocasión, con oración y ruego, presenten sus peticiones a Dios y denle gracias.»
+              </blockquote>
+              <cite>Filipenses 4:6</cite>
+            </div>
+
+            <div class="versiculo-card">
+              <blockquote>
+                «Clama a mí, y yo te responderé, y te enseñaré cosas grandes y ocultas que tú no conoces.»
+              </blockquote>
+              <cite>Jeremías 33:3</cite>
+            </div>
+
+            <div class="versiculo-card">
+              <blockquote>
+                «Y esta es la confianza que tenemos en él, que si pedimos alguna cosa conforme a su voluntad, él nos oye.»
+              </blockquote>
+              <cite>1 Juan 5:14</cite>
+            </div>
+
+            <div class="versiculo-card">
+              <blockquote>
+                «Echando toda vuestra ansiedad sobre él, porque él tiene cuidado de vosotros.»
+              </blockquote>
+              <cite>1 Pedro 5:7</cite>
+            </div>
+
+            <div class="versiculo-card">
+              <blockquote>
+                «Orad sin cesar. Dad gracias en todo, porque esta es la voluntad de Dios para con vosotros en Cristo Jesús.»
+              </blockquote>
+              <cite>1 Tesalonicenses 5:17-18</cite>
+            </div>
+          </aside>
+
+        </div><!-- /oracion-layout -->
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">
+          <svg width="24" height="24" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="14" y="22" width="10" height="13" rx="1" fill="#1a3a5c" stroke="#d4a017" stroke-width="1.2"/>
+            <rect x="13" y="19" width="4" height="4" rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+            <rect x="21" y="19" width="4" height="4" rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+            <line x1="19" y1="19" x2="19" y2="10" stroke="#d4a017" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="19" y1="5"  x2="19" y2="10" stroke="#d4a017" stroke-width="2" stroke-linecap="round"/>
+            <line x1="16" y1="7"  x2="22" y2="7"  stroke="#d4a017" stroke-width="2" stroke-linecap="round"/>
+            <path d="M9 14 Q10.5 11 13 10"  stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+            <path d="M29 14 Q27.5 11 25 10" stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+          </svg>
+          Radio Torre Fuerte
+        </div>
+        <p class="footer-desc">Transmitiendo la Palabra de Dios las 24 horas desde Concepción, Chile.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="programacion.html">Programación</a></li>
+          <li><a href="predicaciones.html">Predicaciones</a></li>
+          <li><a href="oracion.html">Oración</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:radio@torrefuerte.cl">radio@torrefuerte.cl</a></li>
+          <li><a href="tel:+56412345678">+56 41 234 5678</a></li>
+          <li>Concepción, Chile</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span class="footer-year"></span> Iglesia Bautista Torre Fuerte, Concepción, Chile.</p>
+      <p>Desarrollado con ❤️ para la gloria de Dios</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    /**
+     * Manejo del formulario de oración con Formspree (AJAX)
+     * Muestra mensaje de éxito sin redirigir la página.
+     */
+    (function () {
+      const form      = document.getElementById('oracion-form');
+      const successEl = document.getElementById('success-msg');
+      const submitBtn = document.getElementById('submit-btn');
+
+      if (!form) return;
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        // Validación básica
+        const nombre   = form.querySelector('#nombre').value.trim();
+        const peticion = form.querySelector('#peticion').value.trim();
+
+        if (!nombre) {
+          alert('Por favor ingresa tu nombre.');
+          form.querySelector('#nombre').focus();
+          return;
+        }
+        if (!peticion) {
+          alert('Por favor escribe tu petición de oración.');
+          form.querySelector('#peticion').focus();
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = '⏳ Enviando…';
+
+        try {
+          const data   = new FormData(form);
+          const action = form.getAttribute('action');
+
+          const resp = await fetch(action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (resp.ok) {
+            form.reset();
+            successEl.style.display = 'block';
+            successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          } else {
+            const json = await resp.json().catch(() => ({}));
+            const msg  = json.error || 'Ocurrió un error. Intenta de nuevo más tarde.';
+            alert(msg);
+          }
+        } catch (_err) {
+          alert('Error de conexión. Verifica tu internet e intenta nuevamente.');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = '🙏 Enviar Petición';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

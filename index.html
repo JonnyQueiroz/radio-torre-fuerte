@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Radio Torre Fuerte — Transmitiendo la Palabra de Dios. Web radio cristiana de la Iglesia Bautista Torre Fuerte, Concepción, Chile." />
+  <meta name="theme-color" content="#0a1628" />
+  <title>Radio Torre Fuerte | Transmitiendo la Palabra de Dios</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       NAVBAR
+       ====================================================== -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="navbar-inner">
+
+      <!-- Logo + Nombre -->
+      <a href="index.html" class="navbar-brand" aria-label="Radio Torre Fuerte — Inicio">
+        <!-- Logo SVG: Torre con ondas de radio y cruz -->
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Torre / Edificio -->
+          <rect x="14" y="22" width="10" height="13" rx="1" fill="#1a3a5c" stroke="#d4a017" stroke-width="1.2"/>
+          <!-- Puerta de la torre -->
+          <rect x="17" y="29" width="4" height="6" rx="0.5" fill="#d4a017" opacity="0.8"/>
+          <!-- Muros de almenas -->
+          <rect x="13" y="19" width="4"  height="4" rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+          <rect x="21" y="19" width="4"  height="4" rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+          <!-- Poste de la antena -->
+          <line x1="19" y1="19" x2="19" y2="10" stroke="#d4a017" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Cruz en la cima -->
+          <line x1="19" y1="5"  x2="19" y2="10" stroke="#d4a017" stroke-width="2"   stroke-linecap="round"/>
+          <line x1="16" y1="7"  x2="22" y2="7"  stroke="#d4a017" stroke-width="2"   stroke-linecap="round"/>
+          <!-- Ondas de radio (arcos) -->
+          <path d="M9 14 Q10.5 11 13 10"   stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M6 16 Q8 11.5 12 9.5"   stroke="#d4a017" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M3 18 Q5.5 11.5 11 8.5" stroke="#d4a017" stroke-width="1"   stroke-linecap="round" fill="none" opacity="0.35"/>
+          <path d="M29 14 Q27.5 11 25 10"  stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M32 16 Q30 11.5 26 9.5" stroke="#d4a017" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M35 18 Q32.5 11.5 27 8.5" stroke="#d4a017" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.35"/>
+        </svg>
+        <span>Radio Torre Fuerte</span>
+      </a>
+
+      <!-- Menú principal -->
+      <ul class="nav-menu" id="nav-menu" role="menubar">
+        <li role="none"><a href="index.html"        role="menuitem">Inicio</a></li>
+        <li role="none"><a href="programacion.html" role="menuitem">Programación</a></li>
+        <li role="none"><a href="predicaciones.html" role="menuitem">Predicaciones</a></li>
+        <li role="none"><a href="oracion.html"      role="menuitem">Oración</a></li>
+        <li role="none"><a href="contacto.html"     role="menuitem">Contacto</a></li>
+      </ul>
+
+      <!-- Hamburger (móvil) -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Overlay del menú móvil -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- ======================================================
+         HERO — REPRODUCTOR EN VIVO
+         ====================================================== -->
+    <section class="hero" aria-labelledby="hero-heading">
+
+      <!-- Logo grande decorativo -->
+      <div class="hero-logo fade-in">
+        <svg width="70" height="70" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="14" y="22" width="10" height="13" rx="1" fill="#1a3a5c" stroke="#d4a017" stroke-width="1.2"/>
+          <rect x="17" y="29" width="4"  height="6"  rx="0.5" fill="#d4a017" opacity="0.8"/>
+          <rect x="13" y="19" width="4"  height="4"  rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+          <rect x="21" y="19" width="4"  height="4"  rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+          <line x1="19" y1="19" x2="19" y2="10" stroke="#d4a017" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="5"  x2="19" y2="10" stroke="#d4a017" stroke-width="2"   stroke-linecap="round"/>
+          <line x1="16" y1="7"  x2="22" y2="7"  stroke="#d4a017" stroke-width="2"   stroke-linecap="round"/>
+          <path d="M9 14 Q10.5 11 13 10"   stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M6 16 Q8 11.5 12 9.5"   stroke="#d4a017" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M3 18 Q5.5 11.5 11 8.5" stroke="#d4a017" stroke-width="1"   stroke-linecap="round" fill="none" opacity="0.35"/>
+          <path d="M29 14 Q27.5 11 25 10"  stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M32 16 Q30 11.5 26 9.5" stroke="#d4a017" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M35 18 Q32.5 11.5 27 8.5" stroke="#d4a017" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.35"/>
+        </svg>
+      </div>
+
+      <p class="hero-eyebrow fade-in fade-in-delay-1">Iglesia Bautista Torre Fuerte · Concepción, Chile</p>
+
+      <h1 id="hero-heading" class="fade-in fade-in-delay-1">
+        Radio <span>Torre Fuerte</span>
+      </h1>
+
+      <p class="hero-slogan fade-in fade-in-delay-2">Transmitiendo la Palabra de Dios</p>
+
+      <!-- Reproductor principal -->
+      <div class="player-card fade-in fade-in-delay-3" role="region" aria-label="Reproductor de radio en vivo">
+
+        <!-- Estado EN VIVO / FUERA DEL AIRE -->
+        <div class="player-status" id="player-status" aria-live="polite">
+          <span class="vivo-dot" id="vivo-dot"></span>
+          <span class="vivo-label">EN VIVO</span>
+        </div>
+
+        <p class="player-title">Radio Torre Fuerte — 24 horas</p>
+
+        <!-- Elemento de audio nativo (oculto, manejado por JS) -->
+        <!-- ⚠️ IMPORTANTE: Reemplaza XXXXXXXXX con tu stream ID de Zeno.fm -->
+        <!-- Ejemplo: https://stream.zeno.fm/abcde12345uv -->
+        <audio
+          id="stream-audio"
+          preload="none"
+          data-src="https://stream.zeno.fm/XXXXXXXXX"
+          aria-label="Stream de Radio Torre Fuerte">
+        </audio>
+
+        <!-- Controles personalizados -->
+        <div class="player-controls">
+          <!-- Botón play/pause -->
+          <button
+            class="btn-play"
+            id="btn-play"
+            aria-label="Reproducir"
+            title="Reproducir / Pausar">
+            ▶
+          </button>
+
+          <!-- Control de volumen -->
+          <div class="volume-control">
+            <label for="volume-slider" title="Volumen">🔊</label>
+            <input
+              type="range"
+              id="volume-slider"
+              min="0"
+              max="1"
+              step="0.05"
+              value="0.8"
+              aria-label="Control de volumen" />
+          </div>
+        </div>
+
+        <p class="player-note">Presiona ▶ para escuchar · Requiere conexión a internet</p>
+      </div><!-- /player-card -->
+
+    </section><!-- /hero -->
+
+
+    <!-- ======================================================
+         VERSÍCULO DEL DÍA
+         ====================================================== -->
+    <section class="versiculo-section" aria-labelledby="versiculo-heading">
+      <div class="container">
+        <h2 id="versiculo-heading">✦ Versículo del Día ✦</h2>
+        <div class="divider"></div>
+
+        <blockquote>
+          <p class="versiculo-text" id="versiculo-texto">Cargando versículo…</p>
+          <footer>
+            <cite class="versiculo-ref" id="versiculo-ref"></cite>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         PRÓXIMO PROGRAMA
+         ====================================================== -->
+    <section class="proximo-section" aria-labelledby="proximo-heading">
+      <div class="container">
+        <span class="section-label">Próximamente</span>
+        <h2 id="proximo-heading">En Programación</h2>
+        <div class="divider"></div>
+
+        <div class="proximo-card" id="proximo-programa">
+          <div class="proximo-time">—:—</div>
+          <div class="proximo-name">Cargando…</div>
+          <p class="proximo-desc"></p>
+        </div>
+
+        <p style="margin-top:1.5rem;">
+          <a href="programacion.html">Ver programación completa →</a>
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ======================================================
+         REDES SOCIALES
+         ====================================================== -->
+    <section class="social-section" aria-labelledby="social-heading">
+      <div class="container">
+        <span class="section-label">Síguenos</span>
+        <h2 id="social-heading">Redes Sociales</h2>
+        <div class="divider"></div>
+        <p>Mantente conectado y comparte la Palabra con quienes amas.</p>
+
+        <div class="social-grid">
+          <!-- ⚠️ Reemplaza los # con tus URLs reales -->
+          <a href="https://www.facebook.com/TorreFuerteConcepcion"
+             target="_blank" rel="noopener noreferrer"
+             class="social-btn facebook"
+             aria-label="Visitar Facebook de Radio Torre Fuerte">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.88v2.27h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/>
+            </svg>
+            Facebook
+          </a>
+
+          <a href="https://www.youtube.com/@TorreFuerteConcepcion"
+             target="_blank" rel="noopener noreferrer"
+             class="social-btn youtube"
+             aria-label="Visitar YouTube de Radio Torre Fuerte">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.5 6.19a3.02 3.02 0 00-2.13-2.14C19.52 3.5 12 3.5 12 3.5s-7.52 0-9.37.55A3.02 3.02 0 00.5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 002.13 2.14C4.48 20.5 12 20.5 12 20.5s7.52 0 9.37-.55a3.02 3.02 0 002.13-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.75 15.52V8.48L15.82 12l-6.07 3.52z"/>
+            </svg>
+            YouTube
+          </a>
+
+          <a href="https://wa.me/56912345678"
+             target="_blank" rel="noopener noreferrer"
+             class="social-btn whatsapp"
+             aria-label="Contactar por WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15s-.77.97-.94 1.17c-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51-.17 0-.37-.02-.57-.02s-.52.07-.79.37c-.27.3-1.03 1-.03 2.43 1 1.44 1.98 2.68 4.3 3.84 2.32 1.17 2.32.78 2.74.73.42-.05 1.37-.56 1.56-1.1.2-.54.2-1 .14-1.1-.07-.1-.27-.17-.57-.32z"/>
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 2.12.56 4.11 1.53 5.83L0 24l6.35-1.5A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12S18.63 0 12 0zm0 21.8a9.78 9.78 0 01-5.3-1.56l-.38-.22-3.76.89.95-3.65-.25-.38A9.76 9.76 0 012.2 12C2.2 6.58 6.58 2.2 12 2.2S21.8 6.58 21.8 12 17.42 21.8 12 21.8z"/>
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer>
+    <div class="footer-grid">
+      <!-- Columna 1: Marca -->
+      <div>
+        <div class="footer-brand-name">
+          <svg width="28" height="28" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="14" y="22" width="10" height="13" rx="1" fill="#1a3a5c" stroke="#d4a017" stroke-width="1.2"/>
+            <rect x="17" y="29" width="4"  height="6"  rx="0.5" fill="#d4a017" opacity="0.8"/>
+            <rect x="13" y="19" width="4"  height="4"  rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+            <rect x="21" y="19" width="4"  height="4"  rx="0.5" fill="#1a3a5c" stroke="#d4a017" stroke-width="1"/>
+            <line x1="19" y1="19" x2="19" y2="10" stroke="#d4a017" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="19" y1="5"  x2="19" y2="10" stroke="#d4a017" stroke-width="2"   stroke-linecap="round"/>
+            <line x1="16" y1="7"  x2="22" y2="7"  stroke="#d4a017" stroke-width="2"   stroke-linecap="round"/>
+            <path d="M9 14 Q10.5 11 13 10"   stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+            <path d="M29 14 Q27.5 11 25 10"  stroke="#d4a017" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.9"/>
+          </svg>
+          Radio Torre Fuerte
+        </div>
+        <p class="footer-desc">
+          Transmitiendo la Palabra de Dios las 24 horas del día desde Concepción, Chile.
+          Un ministerio de la Iglesia Bautista Torre Fuerte.
+        </p>
+      </div>
+
+      <!-- Columna 2: Navegación -->
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="programacion.html">Programación</a></li>
+          <li><a href="predicaciones.html">Predicaciones</a></li>
+          <li><a href="oracion.html">Petición de Oración</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Contacto rápido -->
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul class="footer-links">
+          <!-- ⚠️ Reemplaza con datos reales -->
+          <li><a href="mailto:radio@torrefuerte.cl">radio@torrefuerte.cl</a></li>
+          <li><a href="tel:+56412345678">+56 41 234 5678</a></li>
+          <li>Concepción, Biobío, Chile</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>© <span class="footer-year"></span> Iglesia Bautista Torre Fuerte, Concepción, Chile. Todos los derechos reservados.</p>
+      <p>Desarrollado con ❤️ para la gloria de Dios</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
