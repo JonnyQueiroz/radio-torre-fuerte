@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+=============================================================================
+  CONFIGURACIÓN DE ICECAST2 — Radio Torre Fuerte
+  Iglesia Bautista Torre Fuerte, Concepción, Chile
+=============================================================================
+  Archivo:  icecast.xml
+  Puerto:   8000
+  Stream:   http://localhost:8000/radio
+  Admin:    http://localhost:8000/admin
+=============================================================================
+-->
+
+<icecast>
+
+  <!-- =========================================================
+       INFORMACIÓN DE LA ESTACIÓN
+       ========================================================= -->
+  <location>Concepción, Chile</location>
+  <admin>radio@torrefuerte.cl</admin>
+
+  <!-- =========================================================
+       LÍMITES Y RENDIMIENTO
+       Ajusta "clients" según el ancho de banda disponible.
+       Con 128 kbps y 100 oyentes se necesitan ~12.8 Mbps de subida.
+       ========================================================= -->
+  <limits>
+    <!-- Número máximo de oyentes simultáneos -->
+    <clients>100</clients>
+
+    <!-- Número máximo de fuentes (encoders) simultáneas -->
+    <sources>2</sources>
+
+    <!-- Hilos de trabajo del servidor -->
+    <threadpool>5</threadpool>
+
+    <!-- Tamaño del encabezado HTTP (bytes) -->
+    <header-timeout>15</header-timeout>
+
+    <!-- Tiempo de espera para clientes lentos (segundos) -->
+    <source-timeout>10</source-timeout>
+
+    <!-- Permite que los clientes actualicen (burst al conectar) -->
+    <burst-on-connect>1</burst-on-connect>
+
+    <!-- Datos enviados al conectar (bytes) para evitar silencio inicial -->
+    <burst-size>65536</burst-size>
+  </limits>
+
+  <!-- =========================================================
+       AUTENTICACIÓN
+       Cambia estas contraseñas antes de exponer a internet.
+       ========================================================= -->
+  <authentication>
+    <!-- Contraseña que usa BUTT (u otro encoder) para conectarse -->
+    <source-password>torrefuerte2024</source-password>
+
+    <!-- Contraseña para configurar relay (repetidores) -->
+    <relay-password>torrefuerte2024</relay-password>
+
+    <!-- Contraseña del panel de administración web -->
+    <admin-user>admin</admin-user>
+    <admin-password>admin_torre2024</admin-password>
+  </authentication>
+
+  <!-- =========================================================
+       HOSTNAME Y PUERTO
+       hostname: usa "localhost" para acceso local.
+       Cloudflare Tunnel proporciona la URL pública externa,
+       por lo que no es necesario cambiar este valor.
+       ========================================================= -->
+  <hostname>localhost</hostname>
+
+  <!-- =========================================================
+       SOCKETS DE ESCUCHA
+       Icecast escuchará en el puerto 8000 de todas las interfaces.
+       ========================================================= -->
+  <listen-socket>
+    <port>8000</port>
+    <!-- Descomenta la siguiente línea para escuchar solo en localhost: -->
+    <!-- <bind-address>127.0.0.1</bind-address> -->
+  </listen-socket>
+
+  <!-- =========================================================
+       PUNTOS DE MONTAJE (Mount Points)
+       Define el stream principal en /radio
+       ========================================================= -->
+  <mount type="normal">
+    <!-- Ruta del stream: http://localhost:8000/radio -->
+    <mount-name>/radio</mount-name>
+
+    <!-- Nombre de la estación (visible en reproductores) -->
+    <stream-name>Radio Torre Fuerte</stream-name>
+
+    <!-- Descripción de la estación -->
+    <stream-description>Iglesia Bautista Torre Fuerte, Concepción</stream-description>
+
+    <!-- Sitio web de la estación -->
+    <stream-url>https://torrefuerte.cl</stream-url>
+
+    <!-- Género de la programación -->
+    <genre>Cristiano / Predicación</genre>
+
+    <!-- Límite de oyentes para este mount point (0 = usa el global) -->
+    <max-listeners>100</max-listeners>
+
+    <!-- Bitrate máximo permitido (kbps) -->
+    <max-bitrate>128</max-bitrate>
+
+    <!-- Formato del audio -->
+    <type>audio/mpeg</type>
+
+    <!-- Tiempo (segundos) antes de que un oyente inactivo sea desconectado -->
+    <listener-remove-on-disconnect>0</listener-remove-on-disconnect>
+
+    <!-- Mostrar este mount en el directorio de Icecast -->
+    <public>0</public>
+
+    <!-- Tiempo de espera para una fuente desconectada (segundos) -->
+    <!-- Si BUTT se cae, el stream espera 30 segundos antes de cerrar -->
+    <fallback-when-empty>0</fallback-when-empty>
+  </mount>
+
+  <!-- =========================================================
+       RUTAS DE ARCHIVOS
+       Icecast necesita saber dónde están los archivos web y de log.
+       ========================================================= -->
+  <paths>
+    <!-- Directorio raíz de instalación de Icecast -->
+    <basedir>C:\Program Files\Icecast</basedir>
+
+    <!-- Directorio de logs -->
+    <logdir>H:\Web Radio Torre Fuerte\servidor-local\logs</logdir>
+
+    <!-- Directorio de páginas web del admin -->
+    <webroot>C:\Program Files\Icecast\web</webroot>
+
+    <!-- Directorio de archivos de administración -->
+    <adminroot>C:\Program Files\Icecast\admin</adminroot>
+
+    <!-- Alias para el path raíz (redirige / al status de Icecast) -->
+    <alias source="/" dest="/status.xsl"/>
+  </paths>
+
+  <!-- =========================================================
+       LOGGING
+       Niveles: 4=DEBUG, 3=INFO, 2=WARN, 1=ERROR
+       Para producción se recomienda nivel 2 (WARN).
+       ========================================================= -->
+  <logging>
+    <!-- Nombre del archivo de log principal -->
+    <accesslog>icecast.log</accesslog>
+
+    <!-- Log de errores separado -->
+    <errorlog>icecast_error.log</errorlog>
+
+    <!-- Nivel de detalle del log -->
+    <loglevel>2</loglevel>
+
+    <!-- Rotación automática del log (MB) -->
+    <logsize>10240</logsize>
+  </logging>
+
+  <!-- =========================================================
+       SEGURIDAD
+       Permite al servidor correr sin privilegios de root en Linux.
+       En Windows estas opciones no tienen efecto pero se incluyen
+       para compatibilidad.
+       ========================================================= -->
+  <security>
+    <chroot>0</chroot>
+  </security>
+
+</icecast>

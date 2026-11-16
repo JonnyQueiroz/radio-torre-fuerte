@@ -1,0 +1,67 @@
+# =============================================================================
+#  CONFIGURACIÓN DE CLOUDFLARE TUNNEL — Radio Torre Fuerte
+#  Iglesia Bautista Torre Fuerte, Concepción, Chile
+# =============================================================================
+#
+#  Este archivo configura el túnel de Cloudflare que expone el servidor
+#  Icecast (puerto 8000) a internet de forma segura y gratuita, sin
+#  necesidad de abrir puertos en el router.
+#
+#  Cómo usar este archivo:
+#    cloudflared tunnel --config H:\Web Radio Torre Fuerte\servidor-local\cloudflare-config.yml run
+#
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# NOMBRE DEL TÚNEL
+# Debe coincidir exactamente con el nombre usado al crear el túnel:
+#   cloudflared tunnel create radio-torre-fuerte
+# -----------------------------------------------------------------------------
+tunnel: radio-torre-fuerte
+
+# -----------------------------------------------------------------------------
+# ARCHIVO DE CREDENCIALES
+# Se genera automáticamente al crear el túnel con:
+#   cloudflared tunnel create radio-torre-fuerte
+#
+# IMPORTANTE: Reemplaza "USUARIO" con tu nombre de usuario de Windows.
+# Ejemplo: C:\Users\Pastor\. cloudflared\radio-torre-fuerte.json
+#
+# El archivo contiene el UUID del túnel y las claves de autenticación.
+# Nunca lo compartas ni lo subas a GitHub.
+# -----------------------------------------------------------------------------
+credentials-file: C:\Users\USUARIO\.cloudflared\radio-torre-fuerte.json
+
+# -----------------------------------------------------------------------------
+# REGLAS DE ENRUTAMIENTO (Ingress Rules)
+# Define qué servicio local recibe el tráfico de cada hostname público.
+# Las reglas se evalúan de arriba hacia abajo; la última debe ser un
+# catch-all (sin hostname) que devuelva un código HTTP.
+# -----------------------------------------------------------------------------
+ingress:
+
+  # Regla principal: todo el tráfico de radio.torrefuerte.cl
+  # se redirige al servidor Icecast que corre en localhost:8000.
+  #
+  # PREREQUISITO: El dominio torrefuerte.cl debe estar en Cloudflare
+  # y debes haber creado un registro CNAME apuntando a tu túnel:
+  #   cloudflared tunnel route dns radio-torre-fuerte radio.torrefuerte.cl
+  - hostname: radio.torrefuerte.cl
+    service: http://localhost:8000
+
+  # Regla catch-all: cualquier solicitud que no coincida con las
+  # reglas anteriores recibirá un error 404. Obligatorio como
+  # última regla.
+  - service: http_status:404
+
+# =============================================================================
+#  OPCIÓN ALTERNATIVA SIN CONFIGURACIÓN (Quick Tunnel)
+#  Si todavía no tienes un dominio o cuenta de Cloudflare, puedes obtener
+#  una URL pública temporal con un solo comando, sin crear cuenta:
+#
+#    cloudflared tunnel --url http://localhost:8000
+#
+#  Esto genera una URL tipo: https://abc-def-123.trycloudflare.com
+#  Úsala en index.html mientras configuras el dominio permanente.
+#  NOTA: La URL cambia cada vez que reinicias el comando.
+# =============================================================================

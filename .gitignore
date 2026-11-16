@@ -1,0 +1,4 @@
+# Binarios e instaladores locales
+servidor-local/instaladores/*.exe
+servidor-local/cloudflared.exe
+servidor-local/logs/
